@@ -1,0 +1,11 @@
+body {
+	background-color: rgb(60, 60, 60);
+	font-family: tahoma;
+}
+
+h1, h2{
+	background-color: rgb(200, 200, 200);
+	border: 5px solid lightyellow;
+	padding: 25px;
+	margin: 50px;
+}
