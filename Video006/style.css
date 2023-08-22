@@ -1,0 +1,49 @@
+h1 {
+	background-color: gray;
+	border-color: red;
+	font-family: arial;
+	color: white;
+}
+
+body {
+	background-color: rgb(190,190,190);
+	font-family: arial;
+}
+
+img {
+	width: 200px;
+}
+
+a:link {
+  color: blue;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: blue;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: blue;
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:active {
+  color: blue;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.my_a:link, .my_a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.my_a:hover, .my_a:active {
+  background-color: red;
+}
