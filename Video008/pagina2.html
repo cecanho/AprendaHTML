@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Aprenda HTML5 - Exemplo de menu com CSS</title>
+	<style type="text/css">
+		.mul {
+			  list-style-type: none;
+			  margin: 0;
+			  padding: 0;
+			  overflow: hidden;
+			  background-color: rgb(0, 0, 255);
+			}
+
+		.mli {
+		  float: left;
+		}
+
+		.mli .ma {
+		  display: block;
+		  color: white;
+		  text-align: center;
+		  padding: 16px;
+		  text-decoration: none;
+		}
+
+		.mli .ma:hover {
+		  background-color: rgb(0, 100, 255);
+		}
+	</style>
+</head>
+<body>
+	<ul class="mul">
+	  <li class="mli"><a class="ma" href="#home">Home</a></li>
+	  <li class="mli"><a class="ma" href="#tipo1">Tipo "1"</a></li>
+	  <li class="mli"><a class="ma" href="#tipoa1">Tipo "A"</a></li>
+	  <li class="mli"><a class="ma" href="#tipoa2">Tipo "a"</a></li>
+	  <li class="mli"><a class="ma" href="#tipoi1">Tipo "I"</a></li>
+	  <li class="mli"><a class="ma" href="#tipoi2">Tipo "i"</a></li>
+	</ul>
+	<h2 id="tipo1">Numeração</h2>
+		<ol type="1">
+		  <li>Café</li>
+		  <li>Chá</li>
+		  <li>Leite</li>
+		</ol> 
+
+	<h2 id="tipoa1">Ordem alfabética maiúscula</h2>
+		<ol type="A">
+		  <li>Café</li>
+		  <li>Chá</li>
+		  <li>Leite</li>
+		</ol> 
+	
+	<h2 id="tipoa2">Ordem alfabética minúscula</h2>
+		<ol type="a">
+		  <li>Café</li>
+		  <li>Chá</li>
+		  <li>Leite</li>
+		</ol> 
+	
+	<h2 id="tipoi1">Ordem romana em maiúscula</h2>
+		<ol type="I">
+		  <li>Café</li>
+		  <li>Chá</li>
+		  <li>Leite</li>
+		</ol> 
+	
+	<h2 id="tipoi2">Ordem romana em minúscula</h2>
+		<ol type="i">
+		  <li>Café</li>
+		  <li>Chá</li>
+		  <li>Leite</li>
+		</ol> 
+	
+</body>
+</html>

@@ -1,0 +1,73 @@
+li, dt {
+  font-family: arial;
+  font-size: 20px;
+}
+
+dd {
+  font-family: arial;
+  font-size: 18px;
+  font-style: italic;
+}
+
+h1 {
+	background-color: gray;
+	border-color: red;
+	font-family: arial;
+	color: white;
+}
+
+p {
+  width: 700px;
+  text-align: justify;
+  background-image: url('pc.jpg');
+}
+
+body {
+	background-color: rgb(190,190,190);
+  background-image: url('quad.jpg');
+  background-repeat: no-repeat;
+  background-size: 50% 50%;
+	font-family: arial;
+}
+
+img {
+	width: 10%;
+}
+
+hr {
+  color: yellow;
+}
+
+a:link {
+  color: blue;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: blue;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: blue;
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:active {
+  color: blue;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+.my_a:link, .my_a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.my_a:hover, .my_a:active {
+  background-color: red;
+}
