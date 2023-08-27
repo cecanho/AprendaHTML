@@ -1,0 +1,31 @@
+h1, h2{
+	font-family: arial, sans-serif;	
+	text-align: center;
+}
+
+table{
+	width: 100%;
+	border: 1px solid grey;
+	font-family: arial, sans-serif;
+	border-spacing: 15px;
+}
+
+th{
+	background-color: #1aFaaa;
+	height: 25px;
+}
+
+td{
+	text-align: center;
+	border-bottom: 1px solid black;
+	height: 25px;
+	padding: 15px;
+}
+
+tr:nth-child(even) {
+  background-color: #ddd;
+}
+
+tr:hover{
+	background-color: #aaffaa;
+}
