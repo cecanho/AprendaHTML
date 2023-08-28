@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Aprenda HTML5 - Vídeo 010</title>
+	<link rel="stylesheet" type="text/css" href="style.css">	
+</head>
+<body>
+<h1 id="inicio">Blocos, elementos dentro de blocos, uso de classes e id's.</h1>
+<a href="#paragrafo2">Ir para ID</a>
+<hr>
+<h2>Blocos</h2>
+<p class="paragrafo1">Um parágrafo é entendido como um elemento do tipo bloco "p".</p>
+<div class="divisoria1">Uma "div" é entendida como um elemento do tipo bloco que pode dividir o documento HTML em seções.</div>
+<h2>Elementos dentro de blocos</h2>
+<p class="divisoria1">O <span>Pingo</span> é um cachorro danadinho.</p>
+<h2>Classes</h2>
+<button onclick="myFunction()">Escondendo elementos da classe city!</button>
+<h2 class="city main">London</h2>
+<div class="city">  
+  <p>London is the capital of <span>England</span>.</p>
+</div>
+
+<div class="city">
+  <h2>Paris</h2>
+  <p>Paris is the capital of <span>France</span>.</p>
+</div>
+
+<div class="city">
+  <h2>Tokyo</h2>
+  <p>Tokyo is the capital of <span>Japan</span>.</p>
+</div>
+<h2>ID's</h2>
+	<p id="paragrafo2">Este é um bloco formatado pelo seu ID. Este ID é único em todo o documento</p>
+	<button onclick="trocaNome()">Trocar texto</button>
+	<a href="#inicio">Início</a>
+</body>
+<script type="text/javascript">
+function myFunction() {
+  	var x = document.getElementsByClassName("city");
+  	for (var i = 0; i < x.length; i++) {
+    	x[i].style.display = "none";
+  	}
+}
+
+function trocaNome(){
+	document.getElementById("paragrafo2").innerHTML = "Aprendendo HTML com JAVAScript!";
+}
+</script>
+</html>
