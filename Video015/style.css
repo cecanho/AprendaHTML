@@ -1,0 +1,38 @@
+body{
+	background-color: black;
+	color: greenyellow;
+	font-family: arial;
+}
+
+h1, h2, h3, h4, hr{
+	color: red;
+}
+
+nav {
+	background-color: black;
+	text-align: center;
+	height: 30px;
+}
+
+a:link {
+  color: greenyellow;
+  font-size: 20px;
+  background-color: black;
+}
+
+a:visited {
+  color: yellow;
+  background-color: transparent;
+}
+
+a:hover {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: underline;
+}
