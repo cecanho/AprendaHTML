@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Aprenda HTML5 - Vídeo 017</title>
+	<style type="text/css">
+		body {
+			background-color: rgb(255,250,205);
+			font-family: arial;
+		}
+
+		legend, label{
+			font-size: 20px;
+		}
+
+		.formulario {
+			background-color: rgb(240,255,255);
+			width: 500px;
+		}
+
+		.elemento {
+			height: 25px;
+			margin: 10px;
+			margin-left: 15px;
+			margin-right: 15px;
+			font-family: arial;
+			font-size: 20px;
+			background-color: rgb(245,245,245);
+			color: darkblue;
+		}
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Aprenda HTML5</h1>
+		<h4>Formulários</h4>
+	</header>
+
+	<hr />
+
+	<div class="formulario">
+		<section>
+			<legend><b>Cadastro</b></legend>
+			<form name="fformulario" >
+				<div><label for="fnome">Nome: </label><input type="text" name="fnome" id="fnome" class="elemento" size="30px" /></div>
+				<div><label for="fidade">Idade: </label><input type="text" name="fidade" id="fidade" class="elemento" size="30px" /></div>
+				<div><label for="femail">Email: </label><input type="email" name="femail" id="femail" class="elemento" size="30px" /></div>
+				<div>
+					<p>Escolha a linguagem:</p>
+					<input type="radio" id="html" name="fav_language" value="HTML" />
+					<label for="html">HTML</label><br />
+					<input type="radio" id="css" name="fav_language" value="CSS" />
+					<label for="css">CSS</label><br />
+					<input type="radio" id="javascript" name="fav_language" value="JavaScript" />
+					<label for="javascript">JavaScript</label>
+				</div>
+				<div>
+					<p>Marque as opções que possui:</p>
+					<input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+					<label for="vehicle1"> Tenho uma Bike </label><br>
+					<input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+					<label for="vehicle2"> Tenho um Skate </label><br>
+					<input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+					<label for="vehicle3"> Tenho uma Prancha </label>
+				</div>
+				<div>
+					<button onclick="cadastrar()">Enviar</button>
+				</div>				
+			</form>
+		</section>
+	</div>
+
+	<div id="dados">
+		<p>Nome: <div id="nome"></div></p>
+		<p>Idade: <div id="idade"></div></p>
+		<p>Email: <div id="email"></div></p>
+	</div>
+
+</body>
+</html>
