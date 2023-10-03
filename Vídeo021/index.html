@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8" />
+	<title>Aprenda HTML5</title>
+</head>
+<body>
+	<header>
+		<h1>Aprenda HTML5</h1>
+	</header>
+	<h3>Latitude e Longitude sua:</h3>
+	<p>Clique no botão para mostrar a sua latitude e longitude:</p>
+	<button onclick="getLocation()">Tente >></button>
+	<p id="demo"></p>
+	<script>
+		var x = document.getElementById("demo");
+
+		function getLocation() {
+		  if (navigator.geolocation) {
+		    navigator.geolocation.getCurrentPosition(showPosition, showError);
+		  } else { 
+		    x.innerHTML = "Geolocalização não é suportada pelo navegador.";
+		  }
+		}
+
+		function showPosition(position) {
+		  x.innerHTML = "Latitude: " + position.coords.latitude + 
+		  "<br />Longitude: " + position.coords.longitude;
+		}
+
+		function showError(error) {
+		  switch(error.code) {
+		    case error.PERMISSION_DENIED:
+		      x.innerHTML = "Requisição negada pelo usuário sobre sua geolocalização."
+		      break;
+		    case error.POSITION_UNAVAILABLE:
+		      x.innerHTML = "A informação sobre a localização não está disponível."
+		      break;
+		    case error.TIMEOUT:
+		      x.innerHTML = "A requidsição para obter a localização do usuário expirou."
+		      break;
+		    case error.UNKNOWN_ERROR:
+		      x.innerHTML = "Um erro desconhecido ocorreu."
+		      break;
+  }
+} 
+	</script>
+</body>
+</html>
