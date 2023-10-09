@@ -1,0 +1,61 @@
+<!DOCTYPE html />
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<title>Aprenda HTML5</title>
+	<style>
+		#div1 {
+		  width: 350px;
+		  height: 70px;
+		  padding: 10px;
+		  border: 1px solid #aaaaaa;	
+		}
+		#div2, #div3 {
+		  float: left;
+		  width: 100px;
+		  height: 35px;
+		  margin: 10px;
+		  padding: 10px;
+		  border: 1px solid black;
+		}
+	</style>
+	<script>
+		function allowDrop(ev) {
+		  ev.preventDefault();
+		}
+
+		function drag(ev) {
+		  ev.dataTransfer.setData("text", ev.target.id);
+		}
+
+		function drop(ev) {
+		  ev.preventDefault();
+		  var data = ev.dataTransfer.getData("text");
+		  ev.target.appendChild(document.getElementById(data));
+		}
+	</script>
+</head>
+<body>
+	<header>
+		<h1>Aprenda HTML5</h1>
+		<h4>Drag and Drop (Arraste e Solte)</h4>
+	</header>
+	<hr />
+	<h3>Drap and Drop</h3>
+	<p>Drag and Drop é uma funcionalidade onde você pode arrastar objetos e soltá-los em determinados lugares em HTML.</p>
+	</h3>
+	<p>Arraste a imagem para dentro do retângulo:</p>
+	<div id="div1" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+	<br />
+	<img id="drag1" src="img_logo.gif" draggable="true" ondragstart="drag(event)" width="336" height="69">
+	<p>Arraste a imagem abaixo do retângulo 1 para o retângulo 2:</p>
+	<div id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">
+		1
+		<img id="drag2" src="img_logo.gif" draggable="true" ondragstart="drag(event)" width="88" height="31">
+	</div>
+	<div id="div3" ondrop="drop(event)" ondragover="allowDrop(event)">
+		2
+	</div>
+</body>
+</html>
