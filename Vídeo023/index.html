@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="utf-8" />
+	<title>Aprenda HTML 5</title>
+</head>
+<body>
+	<header>
+		<h1>Aprenda HTML5</h1>
+	</header>
+	<h3>Web Storage: exemplo com nome</h3>
+	<div id="result"></div>
+	<script>
+	// Check browser support
+		if (typeof(Storage) !== "undefined") {
+		  // Store
+		  localStorage.setItem("curso", "Aprenda HTML5");
+		  // Retrieve
+		  document.getElementById("result").innerHTML = localStorage.getItem("curso");
+		} else {
+		  document.getElementById("result").innerHTML = "Desculpe, seu navegador não suporta Web Storage...";
+		}
+	</script>
+	<h3>Web Storage: exemplo com nome (Outro formato)</h3>
+	<div id="resultado"></div>
+	<script>
+	// Check browser support
+		if (typeof(Storage) !== "undefined") {
+		  // Store
+		  localStorage.curso ="Curso: Aprenda HTML5";
+		  // Retrieve
+		  document.getElementById("resultado").innerHTML = localStorage.curso;
+		  localStorage.removeItem("curso");
+		} else {
+		  document.getElementById("result").innerHTML = "Desculpe, seu navegador não suporta Web Storage...";
+		}
+	</script>
+	<h3>Contador de cliques (Armazenando a última contagem):</h3>
+	<div id="contador">	</div>
+	<p>Clique no botão para incrementar o contador.</p>
+	<p><button onclick="clickCounter()">Clique aqui!</button></p>
+	<p>Feche a tab de seu naveagador (ou o navegador), e tente novamente, para continuar a contar de onde parou (isto não reseta).</p>
+	<script>
+	function clickCounter() {
+	  if (typeof(Storage) !== "undefined") {
+	    if (localStorage.clickcount) {
+	      localStorage.clickcount = Number(localStorage.clickcount)+1;
+	    	} else {
+	      		localStorage.clickcount = 1;
+	    	}
+	    	document.getElementById("contador").innerHTML = "Você clicou no botão " + localStorage.clickcount + " vez(es).";
+	  	} else {
+	    	document.getElementById("contador").innerHTML = "Desculpe, seu navegador não suporta Web Storage...";
+	  	}
+	}
+</script>
+
+<h3>Contador de cliques (sem armazenar a contagem):</h3>
+	<div id="contador2">	</div>
+	<p>Clique no botão para incrementar o contador.</p>
+	<p><button onclick="clickCounter2()">Clique aqui!</button></p>
+	<p>Feche a tab de seu naveagador (ou o navegador), e tente novamente, para continuar a contar de onde parou (isto não reseta).</p>
+	<script>
+	function clickCounter2() {
+	  if (typeof(Storage) !== "undefined") {
+	    if (sessionStorage.clickcount) {
+	      sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
+	    	} else {
+	      		sessionStorage.clickcount = 1;
+	    	}
+	    	document.getElementById("contador2").innerHTML = "Você clicou no botão " + sessionStorage.clickcount + " vez(es).";
+	  	} else {
+	    	document.getElementById("contador2").innerHTML = "Desculpe, seu navegador não suporta Web Storage...";
+	  	}
+	}
+</script>
+</body>
+</html>
